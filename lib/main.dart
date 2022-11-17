@@ -4,7 +4,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 Future<void> main() async {
-   await ScreenUtil.ensureScreenSize();
+  await ScreenUtil.ensureScreenSize();
   runApp(const MyApp());
 }
 
@@ -17,13 +17,10 @@ class MyApp extends StatelessWidget {
       DeviceOrientation.portraitUp,
       DeviceOrientation.portraitDown,
     ]);
-    return MaterialApp(
-        title: "bmi_calculator",
-        debugShowCheckedModeBanner: false,
-        theme: ThemeData(
-            primaryColor: Colors.white,
-            ),
-        home: const BMI(),
-       );
+    return const MaterialApp(
+      title: "bmi_calculator",
+      debugShowCheckedModeBanner: false,
+      home: BMI()
+    );
   }
 }
